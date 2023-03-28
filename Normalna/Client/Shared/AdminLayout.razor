@@ -1,0 +1,60 @@
+﻿
+@using MudBlazor;
+@inherits LayoutComponentBase
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+<MudLayout>
+    <MudAppBar Elevation="1" >
+
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Style="@($"color:{Colors.Purple.Accent3};")" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="d-flex flex-row-reverse flex-grow-1 gap-4" Style="@($"color:{Colors.Purple.Accent2};")" font-size="31">Panel Administracji</MudText>
+        <MudSpacer />
+    </MudAppBar>
+        <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2" cursor-crosshair>
+            @*NavMenu*@
+            <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+            <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Toggle Light/Dark Mode" />
+            @code {
+            private MudTheme _theme = new();
+            private bool _isDarkMode;
+            }
+        </MudDrawer>
+    <MudMainContent>
+        @*Body*@
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
+
+<MudContainer Class="mt-16 px-8" Style="height: 350px; width: 620px;">
+    <MudGrid Class="d-flex justify-center align-center flex-grow-1">
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class=" mud-theme-primary  gap-4 pa-10  d-flex justify-center align-center flex-grow-1" Style="height: 120px; width:120px;">
+                <MudIconButton Icon="@Icons.Material.Filled.Castle" Size="Size.Large" />
+                <MudText Typo="Typo.caption">Zarzadzaj Innymi Uzytkownikami!</MudText>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class=" mud-theme-warning gap-4  pa-10 d-flex justify-center align-center flex-grow-1" Style="height: 120px; width:120px;">
+                <MudIconButton Icon="@Icons.Material.Filled.Handshake" Size="Size.Large" />
+                <MudText Typo="Typo.caption">Wyslij prosbe o nowe rzeczy do  dzialu</MudText>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Elevation="2" Class=" mud-theme-secondary gap-4  pa-10 d-flex justify-center align-center flex-grow-1" Style="height: 120px; width:120px;">
+                <MudIconButton Icon="@Icons.Material.Filled.ShoppingCart" Size="Size.Large" />
+                <MudText Typo="Typo.caption">Zamow przedmioty do  dzialu</MudText>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
