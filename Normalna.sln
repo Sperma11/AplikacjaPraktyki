@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Normalna.Server", "Normalna\Server\Normalna.Server.csproj", "{59B92586-1639-4B4E-80DB-8B6DDEE522B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Normalna.Server", "Normalna\Server\Normalna.Server.csproj", "{59B92586-1639-4B4E-80DB-8B6DDEE522B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Normalna.Client", "Normalna\Client\Normalna.Client.csproj", "{14FFB863-5437-4503-83C5-F8A943F965B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Normalna.Client", "Normalna\Client\Normalna.Client.csproj", "{14FFB863-5437-4503-83C5-F8A943F965B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Normalna.Shared", "Normalna\Shared\Normalna.Shared.csproj", "{B63D0744-FE8C-4B96-87DE-595AB8C196B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Normalna.Shared", "Normalna\Shared\Normalna.Shared.csproj", "{B63D0744-FE8C-4B96-87DE-595AB8C196B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
